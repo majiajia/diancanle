@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div id="user_page">
+<form id="form_user" action="/action/user/hash_create" method="POST" style="float:left; width:620px;">
+    <h2>注册点餐喽</h2>
+
+	<table cellspacing="0" cellpadding="0">
+    	<tbody><tr id="tr_email">
+    		<th nowrap="">电子邮箱：</th>
+    		<td>
+				<input type="text" name="email" id="f_email" value="" class="TEXT" style="width:200px;">
+				<span id="email_tip">不建议使用 Gmail，原因你知道的</span>
+			</td>
+    	</tr>
+    	<tr>
+    		<th>昵称：</th>
+    		<td><input type="text" name="name" id="f_name" maxlength="20" class="TEXT" style="width:150px;">
+				<span id="name_msg">不能超过10个字</span>
+			</td>
+    	</tr>
+    	<tr>
+    		<th>登录密码：</th>
+    		<td><input type="password" name="pwd" id="f_pwd" class="TEXT" style="width:150px;">
+				<span id="password_msg">至少6位,必须是字母或特殊符合和数字结合</span>
+			</td>
+    	</tr>
+    	<tr>
+    		<th>密码确认：</th>
+    		<td><input type="password" name="pwd2" id="f_pwd2" class="TEXT" style="width:150px;"></td>
+    	</tr>
+    	<tr id="tr_gender">
+        	<th>性别：</th>
+    		<td>
+				<input type="radio" name="gender" value="1" id="gender_1"><label for="gender_1">男</label>&nbsp;&nbsp;&nbsp;
+				<input type="radio" name="gender" value="2" id="gender_2"><label for="gender_2">女</label>
+				<span class="nodisp">请选择性别</span>
+			</td>
+        </tr>
+    	<tr id="tr_area">
+    		<th>居住地区：</th>
+    		<td>
+    <select name="city" id="userCity"></select>
+    <script src="/js/getcity.js?t=1377425784000"></script><span class="nodisp">请选择您所在的地区</span></td>
+    	</tr>
+		<tr>
+    		<th>&nbsp;</th>
+			<td>
+			<img id="img_vcode" align="absmiddle" alt="..." src="/action/user/captcha" style="border:2px solid #ccc;">
+            <script language="javascript">function _rvi(){document.getElementById('img_vcode').src = '/action/user/captcha?t='+Math.random(1000);}</script>
+			</td>
+		</tr>
+    	<tr class="buttons">
+    		<th>&nbsp;</th>
+			<td style="padding:20px 0;">
+    		<input type="submit" value=" 注册新用户 " class="button submit"> <span id="error_msg" class="error_msg" style="display:none"></span>
+			<br><br>
+			</td>
+    	</tr>
+	</tbody></table>
+</form>
+    <div id="login_tip">
+        已有帐号？ <a href="/home/login">直接登录</a>
+    </div>
+</div>
+</body>
+</html>
